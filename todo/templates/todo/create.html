@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block Content %}
+	{% if title %}
+		<h1 class="text-center col">{{title}}</h1>
+	{% endif %}
+<div class='row'>
+	<form class=" col-12 col-md-10 mb-3 mx-auto" method="POST" action ='.'> 
+		{% csrf_token %}
+		{{form|crispy}}
+		<br/>
+
+
+   
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add</button>
+      
+
+</form>
+</div>
+
+
+
+{% endblock %}

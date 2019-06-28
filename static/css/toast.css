@@ -1,0 +1,33 @@
+.toast{
+  position:absolute;
+  color:#fff;
+  z-index: 1;
+
+  }
+ 
+ 
+.pos{
+  position:absolute;
+  z-index: -1;
+
+  }
+
+
+.succ{
+	background-color: #76ff03;
+  }
+
+ .inf{
+background-color: #00b8d4;
+ }
+
+ .war{
+
+background-color: #ffc107;
+
+ }
+
+ .err
+ {
+background-color: #d50000;
+ }

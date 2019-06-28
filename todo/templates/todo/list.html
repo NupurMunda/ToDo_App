@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block b_title %}
+{{title}}
+{% endblock %}
+{% block Content %}
+
+
+
+{% if title %}
+	<h1 class="text-center col">{{title}}</h1>
+{% endif %}
+<div class='row'>
+{% for object in object_list %}
+	{% include 'todo/list-inline.html' with task=object truncate=True detail=False %}
+	
+
+{% endfor %}
+</div>
+
+
+{% endblock %}

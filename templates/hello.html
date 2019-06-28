@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block b_title %}
+Home Page
+{% endblock %}
+{% block body%}
+<h1>{{title}}</h1>
+
+
+{% for bl in blog_list %}
+	{% include 'blog/list-inline.html' with blog_post=bl truncate=True detail=False %}
+{% endfor %}
+{% endblock %}

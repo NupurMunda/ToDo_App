@@ -1,0 +1,13 @@
+.bg {
+	color: #004d40;
+	background-color:#004d40;
+}
+.nv{
+	color: #e0f2f1;
+}
+.nv:hover{
+	color: #80d8ff;
+}
+.navbar {
+	margin-bottom: 20px;
+}

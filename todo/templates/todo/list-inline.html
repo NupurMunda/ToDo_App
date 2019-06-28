@@ -1,0 +1,62 @@
+ 
+<div class="col-12 col-md-10 mb-3 mx-auto">
+{% if y %}
+	<div class='card    text-dark home '>
+{% else %} 
+{% if x %}
+	<div class='card  text-dark  todo'>
+{% else %}
+	<div class='card  text-dark done'>
+{% endif %}
+{% endif %} 
+<div class ='card-body '>
+		
+		<h5 class ='card-title'>{{ task.title }}</h5>
+
+		<p class="card-text"> 
+			
+			{{ task.description | linebreaks }}
+			
+		</p>
+		<p class="card-text"> 
+			
+			deadline: {{ task.deadline}}
+			
+		</p>
+
+
+		{% if y %}
+
+		<button class="btn btn-secondary my-2 my-sm-0 float-right text-light homebtn" type="text">{{task.status}} </button>
+
+
+
+
+		{% else %}
+
+
+
+
+		{% if x %}
+		<form method="POST" action ="/task-completed/{{task.id}}"> {% csrf_token %}
+		 <button class="btn btn-primary my-2 my-sm-0 text-light float-right   todobtn" type="submit">Complete </button>
+		 </form>
+		 {% else %}
+		 <button class="btn btn-success my-2 my-sm-0 text-light float-right  donebtn" type="text">Completed </button>
+		 {% endif %}
+		 {% endif %}
+
+
+		 
+		 <form method="POST" action ="/task-delete/{{task.id}}"> {% csrf_token %}
+		 <button class="btn btn-danger my-2 my-sm-0 text-light float-right" type="submit">Delete </button>
+		 </form>
+
+		
+
+		
+
+	</div>
+
+</div>
+</div>

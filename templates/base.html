@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href='{% static "css\navbar.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css\toast.css" %}'/>
+    <link rel="stylesheet" type="text/css" href='{% static "css\style.css" %}'/>
+    <!--Import materialize.css-->
+
+    <title>{% block b_title %}
+   {% endblock %}</title>
+  </head>
+  <body>
+  	{% include 'navbar.html' %}
+ 	{% include "messages.html" %}	  
+  <div class ='container-fluid pos'>
+
+    {% block Content %} 
+     {% endblock %}
+</div>
+
+
+<script>
+$(document).ready(function(){
+	$('.toast').toast({ delay: 5000 });
+      $('.toast').toast('show');
+});
+</script>
+    {% include "js.html" %}
+
+  </body>
+</html>

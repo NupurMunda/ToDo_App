@@ -1,0 +1,47 @@
+
+<nav class="navbar navbar-expand-lg text-warning bg " >
+  <a class="navbar-brand nv" href="/">Tasks To Do</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  	{% if user.is_authenticated %}
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link nv" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nv" href="/view-task">Tasks ToDo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nv" href="/view-completed-task">Tasks Completed</a>
+      </li>
+      <li class="nav-item float-right">
+        <a class="nav-link nv" href="/add-task">Add Task <span class="sr-only">(current)</span></a>
+      </li>
+      
+    </ul>
+    <ul class="navbar-nav ml-auto float-right">
+    	
+      <li class="nav-item">
+        <a class="nav-link nv" href="/logout">Logout</a>
+
+      </li>
+	
+	</ul>
+	{% else %}
+		<ul class="navbar-nav ml-auto float-right">
+    	<li class="nav-item">
+        <a class="nav-link nv" href="/register">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link nv" href="/login">Login</a>
+
+      </li>
+	
+	</ul>
+	{% endif %}
+
+  </div>
+</nav>

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block b_title %}
+{{title}}
+{% endblock %}
+
+{% block Content %}
+
+
+<div class='row'>
+<form class=" col-12 col-md-10 mb-3 mx-auto" method="POST" action ='.'> {% csrf_token %}
+      <h4>Task Name: </h4><input class=" form-control col-md-12" type="Title" name='title'   aria-label="Search"><br/>
+      <h4>Task Description: </h4>
+      <input class="form-control col-md-12" type="Description" name='description'   aria-label="Search"><br/>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add</button>
+
+</form>
+</div>
+
+
+
+{% endblock %}
+
+

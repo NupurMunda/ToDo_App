@@ -1,0 +1,34 @@
+{% if messages %}
+<div aria-live="polite" aria-atomic="true" class="container d-flex justify-content-center align-items-center" >
+        {% for message in messages %}
+            {% if message.tags == 'success'%}
+            <div class="toast mt-3 succ" >
+				<div class="toast-body">
+					<center><strong class="mr-auto">{{message}}</strong></center>
+				</div>
+			</div> 
+               
+            {% elif message.tags == 'info'%}
+               <div class="toast mt-3 inf" >
+				<div class="toast-body">
+					<center><strong class="mr-auto">{{message}}</strong></center>
+				</div>
+			</div> 
+            {% elif message.tags == 'error' %}
+                <div class="toast mt-3 err" >
+				<div class="toast-body">
+					<center><strong class="mr-auto">{{message}}</strong></center>
+				</div>
+			</div>
+			{% elif message.tags == 'warning'%}
+                <div class="toast mt-3 war" >
+				<div class="toast-body">
+					<center><strong class="mr-auto">{{message}}</strong></center>
+				</div>
+			</div> 
+             
+            {% endif %}
+        {% endfor %}
+        </div>
+
+    {% endif %}
