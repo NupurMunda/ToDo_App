@@ -7,9 +7,9 @@ It also supports user login and user registration
 
 
 ## Running Locally 
-##### Make sure you have Python 3.7 installed locally. 
+##### Make sure you have Python 3.7 installed locally
 
-$ git clone https://github.com/Kiraeraser/ToDo_App.git
+$ git clone https://github.com/Kiraeraser/ToDo_App.git         
 $ cd ToDo_App
 $ pip install -r requirements.txt
 $ python manage.py migrate
